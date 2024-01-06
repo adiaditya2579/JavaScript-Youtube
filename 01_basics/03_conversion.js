@@ -43,6 +43,6 @@
 // console.log(2+2+"3")
 // console.log("2"+"2"+3)
 
-let count = 100
-let finalNumber = ++count
-console.log(finalNumber)
+// let count = 100
+// let finalNumber = ++count
+// console.log(finalNumber)

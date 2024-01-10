@@ -1,6 +1,7 @@
 // if
 const isUserloggedIn = true
 const temperature = 41
+
 // <, >, <=, >=, ==, !=, ===, !==
 
 
@@ -24,7 +25,7 @@ const score = 200
 
 const balance = 1000;
 
-// if (balance > 500) console.log("test"),console.log("test2");   this is not a good way to write if statment also this is currect code 
+// if (balance > 500) console.log("test"),console.log("test2"); -----   this is not a good way to write if statment also this is currect code 
 
 // if (balance < 500){
 //     console.log("balance is greter then 500")
@@ -35,7 +36,11 @@ const balance = 1000;
 const userLoggedIn = true;
 const debitcard = true;
 const loggedInFromGoogle = false;
+const loggedInFromEmail = true;
 
-if (userLoggedIn && debitcard && loggedInFromGoogle ){
+if (userLoggedIn && debitcard && 2==3 ){
     console.log("Allow to buy course")
+}
+if (loggedInFromGoogle || loggedInFromEmail){
+    console.log("user allowd to Loged In")
 }

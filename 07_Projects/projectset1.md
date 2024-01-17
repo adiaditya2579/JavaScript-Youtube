@@ -1,3 +1,29 @@
+## Project 1 solution
+``` javascript
+const buttons = document.querySelectorAll(".button");
+    const body = document.querySelector("body");
+
+    buttons.forEach(function (button) {
+      button.addEventListener("click", function (e) {
+        if (e.target.id === "red") {
+          body.style.backgroundColor = "#FCAB64";
+        }
+        if (e.target.id === "yellow") {
+          body.style.backgroundColor = e.target.id;
+        }
+        if (e.target.id === "raj") {
+          body.style.backgroundColor = "#7FD8BE";
+        }
+        if (e.target.id === "black") {
+          body.style.backgroundColor = e.target.id;
+        }
+      });
+    });
+```
+
+
+
+
 ## project 2 solution 
 ```javascript
 const form = document.querySelector('form')
@@ -23,6 +49,7 @@ form.addEventListener('submit', function(e){
 })
 
 
+
 ```
 
 ## project 3 
@@ -38,6 +65,7 @@ setInterval(function () {
   clock.innerHTML = date.toLocaleTimeString()
 }, 1000);
 ```
+
 
 
 ## project 4
@@ -88,6 +116,8 @@ function validateGuess(guess){
     }
   }
 }
+
+
 
 function checkGUess(guess){
   if(guess === randomNumber){

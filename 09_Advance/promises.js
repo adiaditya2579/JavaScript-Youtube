@@ -36,23 +36,68 @@
 // })
 
 
-const promiseFour = new Promise(function(resolve,reject){
-    let error = true;
+// const promiseFour = new Promise(function(resolve,reject){
+//     setTimeout(function(){
+//         let error = false;
+
+//         if(!error){
+//             resolve({userName:'Adiaditya',password:'1234'})
+//         }else{
+//             reject('ERROR: somthing went wrong')
+//         }
+//     },1000)
+// })
+
+// promiseFour.then((user)=>{
+//     console.log(user);
+//     return user.userName
+// }).then((username)=>{
+//     console.log(username)
+// }).catch(function(error){
+//     console.log(error)
+// }).finally(()=> console.log("The Promise is either resolve or reject"))
+
+
+const promiseFive = new Promise(function(resolve,reject){
     setTimeout(function(){
-
+        let error = false
         if(!error){
-            resolve({userName:'Adiaditya',password:'1234'})
+            resolve({username:"javascript", password:"123"})
         }else{
-            reject('ERROR: somthing went wrong')
+            reject('ERROR: js went wrong')
         }
-    },1000)
-})
+    }, 1000)
+})    
 
-promiseFour.then((user)=>{
-    console.log(user);
-    return user.userName
-}).then((username)=>{
-    console.log(username)
-}).catch(function(error){
-    console.log(error)
+async function consumePromiseFive(){
+    try {
+        const responce = await promiseFive
+        console.log(responce);
+        
+    } catch (error) {
+        console.log(ERROR);
+    }
+}
+consumePromiseFive()
+
+
+// async function getUser(){
+//     try {
+//         const responce = await fetch('https://api.github.com/users/adiaditya2579')
+//         const data = await responce.json()
+//         console.log(data);
+//     } catch (error) {
+//         console.log("E",error);
+//     }
+// }
+// getUser()
+
+fetch('https://api.github.com/users/adiaditya2579')
+.then((response)=>{
+    return response.json()
+}).then((data)=>{
+    console.log(data);
+})
+.catch((error)=>{
+    console.log('error');
 })
